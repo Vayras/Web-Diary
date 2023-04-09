@@ -13,4 +13,3 @@ class Entry(models.Model):
     mood = models.ForeignKey(Mood, on_delete=models.SET_NULL, null=True, blank=True)
 
     # "models.SET_NULL" means that when you delete a particular mood, its value will get equal to null. And "blank=True" ensures that we can submit an empty field in the form.
-    
