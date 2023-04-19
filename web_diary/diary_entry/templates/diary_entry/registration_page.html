@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sing up</title>
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+</head>
+
+<body>
+    <section class="bg-[#F5F5F5] ">
+        <div
+            class="flex sm:flex-row  items-center w-full     max-[864px]:flex-col-reverse justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <div class="w-full max-[639px]:border-white max-[639px]:rounded-none rounded-s-2xl border-y-2 border-l-2  bg-white  md:mt-0 sm:max-w-md  ">
+                <div class="p-6 space-y-[3.4rem] md:space-y-6 sm:p-12">
+                    <h1 class="text-xl font-bold leading-light tracking-tight text-gray-900 md:text-2xl">
+                        Create an account
+                    </h1>
+                    <form class="space-y-3" action="#">
+                        <div>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900">
+                                Name</label>
+                            <input type="text" name="name" id="name"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                placeholder="Name" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">
+                                Email</label>
+                            <input type="email" name="email" id="email"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                placeholder="username@gmail.com" required>
+                        </div>
+                        <div>
+                            <label for="password"
+                                class="block mb-2 text-sm font-medium text-gray-900 :text-white">Password</label>
+                            <input type="password" name="password" id="password" placeholder="••••••••"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                required="">
+                        </div>
+                        <div>
+                            <label for="re-password"
+                                class="block mb-2 text-sm font-medium text-gray-900 :text-white">Enter password again</label>
+                            <input type="password" name="re-password" id="re-password" placeholder="••••••••"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                required="">
+                        </div>
+                        <div></div>
+                        <button type="submit"
+                            class="w-auto  text-white bg-[#0077c0] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-6 py-2.5 text-center">Register</button>
+                        <p class="text-sm inline max-[639px]:block max-[639px]:ml-1 max-[864px]:block max-[864px]:ml-1 ml-9 font-light text-gray-500">
+                            Already have an account ! <a href="sign_in.html"
+                                class="font-medium text-primary-600 hover:underline">Sign in</a>
+                        </p>
+                    
+                    </form>
+                </div>
+            </div>
+            <div class=" bg-white max-[639px]:rounded-none max-[639px]:border-white py-[4.38rem] rounded-e-2xl max-[864px]:py-[5.4rem] max-[767px]:py-[5.99rem]  border-y-2 border-r-2 max-[639px]:py-2">
+                <img class=" h-[24.48rem] max-[864px]:w-screen " src="/public/images/signup-image.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
