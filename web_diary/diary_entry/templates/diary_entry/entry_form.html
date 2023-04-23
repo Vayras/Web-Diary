@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <title>Form</title>
+</head>
+
+<body class="bg-gray-50">
+    <nav class=" border-gray-200 py-3">
+        <div class="max-w-screen-xl flex flex-wrap items-center  justify-between mx-auto p-4">
+            <a href="#" class="-mt-1">
+                <img src="{% static 'images/JournalEase.png' %}" class="w-[9.8rem]"
+                    alt="JournalEase logo" />
+            </a>
+           
+
+            <div class="md:block md:w-auto">
+                <ul
+                    class="font-medium flex items-center md:p-0   border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
+                    <li>
+                        <a href="{% url 'home' %}" class="block pl-3 pr-4 hover:text-[#1aa9b1] rounded  text-gray-900">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block  pl-3 pr-4  py-1 text-white border-2 border-red-500  hover:bg-red-600 rounded-lg bg-red-500  hover:border-red-600 ">Delete</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <section class="bg-white sm:w-[90%] sm:mx-[5%] xl:w-[65%] xl:mx-[17.5%]  mt-16  mx-2">
+        <form action="#" class="border-4 shadow-xl rounded border-spacing-9  border-stone-100">
+            <div class="w-auto   border-b ">
+                <input type="text"
+                    class="text-gray-700  h-[4rem] text-3xl focus:outline-none  w-full pl-4 placeholder:flex placeholder:flex-col placeholder:justify-center   placeholder:text-3xl placeholder:text-gray-700"
+                    placeholder="Title">
+            </div>
+            <div class="">
+                <div class="w-auto   border-b ">
+                    <input type="text"
+                        class="text-gray-700  h-[3.2rem] text-xl focus:outline-none  w-full pl-4 placeholder:flex placeholder:flex-col placeholder:justify-center   placeholder:text-xl placeholder:text-gray-700"
+                        placeholder="Mood Of The Day">
+                </div>
+                <div class="w-auto h-[4rem] border-b flex">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="m-4 text-3xl self-center"
+                        fill="currentColor" class="bi bi-calendar2" viewBox="0 0 16 16">
+                        <path
+                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+                        <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+                    </svg>
+                    <span class="self-center text-gray-900 " id="date">Sun. 17/04/2023 </span>
+
+                </div>
+                <div class="">
+                    <textarea name="textArea" autofocus id="textArea"
+                        class="resize-none w-full h-[52.5rem]   focus:outline-none p-4"></textarea>
+                </div>
+        </form>
+        <div class="flex flex-row  justify-end">
+        <button type="submit" class="text-white absolute mt-6 px-14 right-[18.3rem] bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300  shadow-lg shadow-blue-500/50 font-medium rounded-lg text  py-2.5 text-center mr-2 mb-2 ">Save</button>
+    </div>
+    </section>
+
+    <footer class="mt-36">
+        <div class="bg-[#455A64] text-white h-16 mt-16 w-auto flex flex-row justify-center caret-top items-center">
+            <span class="">@ 2023 Copyright: JournalEase.com</span>
+        </div>
+    </footer>
+    <script>
+        var date = new Date();
+        var current_date = date.getDate() + "-" + (date.getMonth() + 1) + "-" + (date.getFullYear());
+        document.getElementById("date").innerHTML = current_date;
+    </script>
+</body>
+
+</html>

@@ -12,107 +12,115 @@
 </head>
 
 <body class="bg-gray-50">
-<div class="bg-white">
-    <nav class=" border-gray-200 ">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#">
-                <img src="{% static 'images/logo.png' %}" class="h-20 mr-3" alt="JournalEase logo" />
-            </a>
-            <div class="md:block md:w-auto">
-                <ul class="font-medium flex p-4 md:p-0 mt-4  border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
-                    <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 hover:text-[#1aa9b1] rounded  text-gray-900">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 mb-2 text-white border-2 border-red-500  hover:bg-red-500 rounded-lg bg-red-500 hover:text-red-100 ">Delete</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div class=" ">
+        <nav class=" py-3 ">
+            <div class="max-w-screen-xl flex flex-wrap items-center  justify-between mx-auto p-4">
+                <a href="#" class="-mt-3">
+                    <img src="{% static 'images/JournalEase.png' %}" class="w-[9.8rem] h-7"
+                        alt="JournalEase logo" />
+                </a>
+                <div class="px-2 rounded-lg">
+                    <h2 class="text-lg font-semibold tracking-wide">Total Entries :
+                        <span class="text-xl  rounded-full  text-[#263238] bg-[#27F4FF] px-3">9</span>
+                    </h2>
 
-    <section class="text-gray-600 body-font">
-        <div class="container mx-auto flex px-5 py-20 items-center justify-center flex-col">
-            <img alt="hero" class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover  object-center rounded" src="{% static 'images/animation.svg' %}">
-            <div class="text-center lg:w-2/3 w-full">
-                <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900">Web Diary</h2>
-                <h3 class="sm:text-2xl  text-xl">Your Story. Our Diary.</h3>
-                <div class="pt-4">
-                    <a href="#"  class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-gray-900 hover:text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 "> Add Entry
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="ml-1" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                        </svg>
-                    </a>
                 </div>
+
+                <div class="md:block md:w-auto">
+                    <ul
+                        class="font-medium flex items-center md:p-0   border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
+                        <li>
+                            <a href="{% url 'home' %}" class="block pl-3 pr-4 hover:text-[#1aa9b1] rounded  text-gray-900">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block  pl-3 pr-4  py-1 text-white border-2 border-red-500  hover:bg-red-600 rounded-lg bg-red-500 hover:border-red-600 ">Delete</a>
+                        </li>
+                    </ul>
+
+                </div>
+
             </div>
-        </div>
-    </section>
-</div>
-    <section class="pt-4" >
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-                <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900">Our Diary</h2>
-                <p class="font-light text-gray-500 sm:text-xl ">From Memories to Momentum: Reflect on Your Previous Diaries or Create New Ones</p>
-            </div>
-            <div class="grid gap-8 lg:grid-cols-2">
-                <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-md ">
-                    <div class="flex justify-between items-center mb-5 text-gray-500">
-                        <span class="bg-primary-100 uppercase tracking-tight let text-primary-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded ">MOOD
-                        </span>
-                        <span class="text-sm">15 April, 2023</span>
-                    </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "><a href="#"></a> Unveiling the Hidden Gems of My Life</h2>
-                    <p class="mb-5 font-light text-gray-600 ">In this diary, I'll share the stories ofthe unconventional choices I've made, the people I've met, the lessons I've learned, and the joys and struggles I've encountered along the way.</p>
-                    <a href="#" class="inline-flex items-center font-medium text-primary-600  hover:underline underline-offset-4">Read more
-                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-md ">
-                    <div class="flex justify-between items-center mb-5 text-gray-500">
-                        <span class="bg-primary-100 uppercase tracking-tight text-primary-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded ">Title
-                        </span>
-                        <span class="text-sm">15 April, 2023</span>
-                    </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "><a href="#">Navigating Life's Twists and Turns</a></h2>
-                    <p class="mb-5 font-light text-gray-600 ">In this diary, I'm capturing my journeythrough life's twists and turns. It's a chronicle of my resilience, my growth, and my unwaveringspirit in the face of challenges.</p>
-                    <a href="#" class="inline-flex items-center font-medium text-primary-600  hover:underline underline-offset-4">  Read more
-                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"  xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"clip-rule="evenodd"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-md ">
-                    <div class="flex justify-between items-center mb-5 text-gray-500">
-                        <span class="bg-primary-100 uppercase tracking-tight let text-primary-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded "> Title
-                        </span>
-                        <span class="text-sm">15 April, 2023</span>
-                    </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "><a  href="#">Navigating Life's Twists and Turns</a></h2>
-                    <p class="mb-5 font-light text-gray-600 "> In this diary, I'm embarking on a journey of unveiling the hidden gems of my life, those precious moments that often go unnoticed but hold immeasurable value. </p>
-                    <a href="#" class="inline-flex items-center font-medium text-primary-600  hover:underline underline-offset-4"> Read more
-                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"  xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"clip-rule="evenodd"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div
-                    class="p-6 bg-white rounded-lg border border-gray-200 shadow-md ">
-                    <div class="flex justify-between items-center mb-5 text-gray-500">
-                        <span class="bg-primary-100 uppercase tracking-tight  text-primary-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded ">Title</span>
-                        <span class="text-sm">15 April, 2023</span>
-                    </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "><a href="#">Overcoming Challenges and Finding Strength</a></h2>
-                    <p class="mb-5 font-light text-gray-600 ">Dear Diary,  Life is full of challenges that test our resilience, strength, and determination. It's during  these tough times that we often discover our true inner power.</p>
-                    <div class="flex justify-between items-center">
-                        <a href="#" class="inline-flex items-center font-medium text-primary-600  hover:underline underline-offset-4"> Read more
-                            <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"  clip-rule="evenodd"></path>
+        </nav>
+
+        <section class="text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-20 items-center justify-center flex-col">
+                <img alt="hero" class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover  object-center rounded"
+                    src="{% static 'images/animation.svg' %}">
+                <div class="text-center lg:w-2/3 w-full">
+                    <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900">Web Diary</h2>
+                    <h3 class="sm:text-2xl  text-xl">Your Story. Our Diary.</h3>
+                    <div class="pt-4">
+                        <a href="{% url 'entry' %}"
+                            class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-gray-900 hover:text-gray-900 border border-gray-300 rounded-lg bg-white hover:bg-[#27F4FF] ">
+                            Add Entry
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="ml-1"
+                                fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                             </svg>
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="pt-4">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+                <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900">Our Diary</h2>
+                <form class="flex justify-center flex-row mb-4">
+                    <div class="relative ">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <input type="date"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline focus:border-blue-500 block w- pl-10 p-2.5"
+                            placeholder="Search by date" required>
+                        <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3"> </button>
+                    </div>
+                    <button type="submit"
+                        class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white hover:text-[#27F4FF] bg-blue-700 rounded-lg border border-[#1aa9b1] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                        <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>Search
+                    </button>
+                </form>
+                <p class="font-light text-gray-500 sm:text-xl ">Elevate your daily journaling experience with JournalEase - The convenient and secure way to document your memories online.</p>
+            </div>
+
+
+            <div class="grid gap-8 lg:grid-cols-2">
+                {% for i in entry %}
+                <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-md ">
+                    <div class="flex justify-between items-center mb-5 text-gray-500">
+                        <span
+                            class="bg-primary-100 uppercase tracking-tight let text-primary-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded ">{{ i.mood }}
+                        </span>
+                        <span class="text-sm">{{ i.date_created }}</span>
+                    </div>
+                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "><a href="#"></a> {{ i.title }}</h2>
+                    <p class="mb-5 font-light text-gray-600 ">{{ i.content|truncatechars:200 }}</p>
+                    <a href="#"
+                        class="inline-flex items-center font-medium text-primary-600  hover:underline underline-offset-4">Read
+                        more
+                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+                {% endfor %}
+
             </div>
         </div>
     </section>
@@ -123,5 +131,6 @@
         </div>
     </footer>
 </body>
+
 </html>
 <!-- #27F4FF -->

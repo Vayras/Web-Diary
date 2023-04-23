@@ -6,6 +6,9 @@ from django.contrib.auth.models import User
 class Mood(models.Model):
     name = models.CharField(max_length=25, null=True)
 
+    def __str__(self):
+        return self.name
+
 class Entry(models.Model):
     title = models.CharField(max_length=70, null=True, blank=True)
     content = models.TextField()
@@ -15,4 +18,4 @@ class Entry(models.Model):
     # "models.SET_NULL" means that when you delete a particular mood, its value will get equal to null. And "blank=True" ensures that we can submit an empty field in the form.
 
     def __str__(self):
-        return self.date_created
+        return f"{self.date_created.date()}"
