@@ -98,24 +98,20 @@
 
 
             <div class="grid gap-8 lg:grid-cols-2">
-                {% for i in entry %}
+                {% for entry in entries %}
                 <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-md ">
                     <div class="flex justify-between items-center mb-5 text-gray-500">
                         <span
-                            class="bg-primary-100 uppercase tracking-tight let text-primary-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded ">{{ i.mood }}
+                            class="bg-primary-100 uppercase tracking-tight let text-primary-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded ">{{ entry.mood }}
                         </span>
-                        <span class="text-sm">{{ i.date_created }}</span>
+                        <span class="text-sm">{{ entry.date_created }}</span>
                     </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "><a href="#"></a> {{ i.title }}</h2>
-                    <p class="mb-5 font-light text-gray-600 ">{{ i.content|truncatechars:200 }}</p>
-                    <a href="#"
-                        class="inline-flex items-center font-medium text-primary-600  hover:underline underline-offset-4">Read
-                        more
+                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "><a href="#"></a> {{ entry.title }}</h2>
+                    <p class="mb-5 font-light text-gray-600 ">{{ entry.content|truncatechars:200 }}</p>
+                    <a href="{% url 'preview' entry.id %}" class="inline-flex items-center font-medium text-primary-600  hover:underline underline-offset-4">Read more
                         <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                         </svg>
                     </a>
                 </div>

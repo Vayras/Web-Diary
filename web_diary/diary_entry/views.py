@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import *
 from .forms import EntryForm
@@ -7,11 +7,11 @@ from .forms import EntryForm
 
 def home(request):
 
-    entry = Entry.objects.all()
+    entries = Entry.objects.all()
 
-    total_entries = entry.count()
+    total_entries = entries.count()
 
-    context = {'entry':entry, 'total_entries':total_entries}
+    context = {'total_entries':total_entries, 'entries': entries}
 
     return render(request, 'diary_entry/home.html', context)
 
@@ -28,6 +28,24 @@ def entry(request):
     context = {'form':form}
 
     return render(request, 'diary_entry/entry_form.html', context)
+
+def PreviewEntry(request, pk):
+    entry_info = get_object_or_404(Entry, id=pk)
+
+    form = EntryForm(instance=entry_info)
+
+    if request.method == 'POST':
+        form = EntryForm(request.POST, instance=entry_info)
+
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+    context={'form':form}
+
+    return render(request, 'diary_entry/entry_form.html', context)
+
+
 
 def login(request):
     return render(request, 'diary_entry/sign_in.html')
