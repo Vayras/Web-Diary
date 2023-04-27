@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'diary_entry',
+    'django_filters',
+    'django_flatpickr',
 ]
 
 MIDDLEWARE = [
