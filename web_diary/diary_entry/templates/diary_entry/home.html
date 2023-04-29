@@ -74,12 +74,8 @@
                 <form class="flex justify-center flex-row mb-4" method="get">
 
                     <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
-                            </svg>
-                        </div>
-                        <input type="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline focus:border-blue-500 block w- pl-10 p-2.5" placeholder="Search by date" required><!--input field box for entering the date-->
+                        
+                        <input type="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline focus:border-blue-500 block w- pl-10 p-2.5" placeholder="MM/DD/YYYY" required><!--input field box for entering the date-->
                         <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3"></button> <!--Calender icon button-->
 
                     </div>
@@ -89,10 +85,10 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>Search
                     </button>
+                </form>
 
                 <p class="font-light text-gray-500 sm:text-xl ">Elevate your daily journaling experience with JournalEase - The convenient and secure way to document your memories online.</p>
             </div>
-
 
             <div class="grid gap-8 lg:grid-cols-2">
                 {% for entry in entries %}
