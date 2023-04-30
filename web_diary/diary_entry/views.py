@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, request
 from .models import *
 from .forms import EntryForm
+from .filters import EntryFilter
 
 # Create your views here.
 
@@ -11,7 +12,10 @@ def home(request):
 
     total_entries = entries.count()
 
-    context = {'total_entries':total_entries, 'entries': entries, }
+    myFilter = EntryFilter(request.GET, queryset=entries)
+    entries = myFilter.qs
+
+    context = {'total_entries':total_entries, 'entries': entries, 'myFilter':myFilter}
 
     return render(request, 'diary_entry/home.html', context)
 
