@@ -18,6 +18,7 @@
             <nav class="py-3">
               <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
                 <a href="{% url 'home' %}" class="-mt-3">
+
                   <img src="{% static 'images/JournalEase.png' %}" class="w-[9.8rem] h-7" alt="JournalEase logo" />
                 </a>
                 <div class="flex items-center justify-center">
@@ -25,17 +26,24 @@
                   <span class="text-xl rounded-full text-[#263238] bg-[#27F4FF] px-3">{{total_entries}}</span>
                 </div>
                 <div class="md:block md:w-auto">
-                  <ul class="font-medium flex items-center md:p-0 border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
-                    <li>
-                      <a href="{% url 'home' %}" class="block pl-3 pr-4 hover:text-[#1aa9b1] rounded text-gray-900">Home</a>
-                    </li>
-                    <li>
-                      <a href="{% url 'logout' %}" class="block pl-3 pr-4 hover:text-[#1aa9b1] rounded text-gray-900">Logout</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block pl-3 pr-4 py-1 text-white border-2 border-red-500 hover:bg-red-600 rounded-lg bg-red-500 hover:border-red-600 flex items-center">Delete Profile</a>
-                    </li>
-                  </ul>
+
+                    <ul>
+                        class="font-medium flex items-center md:p-0   border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
+                        <li>
+                            <a href="{% url 'home' %}"
+                                class="block pl-3 pr-4 hover:text-[#1aa9b1] rounded  text-gray-900">Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'logout' %}" class="block pl-3 pr-4 hover:text-[#1aa9b1] rounded text-gray-900">Logout</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block pl-3 pr-4 py-1 text-white border-2 border-red-500 hover:bg-red-600 rounded-lg bg-red-500 hover:border-red-600 flex items-center"
+                                onclick="showWarning()">Delete Profile</a>
+                        </li>
+                    </ul>
+
+
                 </div>
               </div>
             </nav>
@@ -71,26 +79,26 @@
                 <form class="flex justify-center flex-row mb-4" method="get">
 
                     <div class="relative">
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-                        <svg aria-hidden="true" class="text-gray-500 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4H19C20.1046 4 21 4.89543 21 6V18C21 19.1046 20.1046 20 19 20H5C3.89543 20 3 19.1046 3 18V6C3 4.89543 3.89543 4 5 4Z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 2V6"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 2V6"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10H21"></path>
-                        </svg>
-                    </span>
-                        {{ myFilter.form.as_p }}
+
+                        <input type=""
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline focus:border-blue-500 block w- pl-10 p-2.5"
+                            placeholder="MM/DD/YYYY" required><!--input field box for entering the date-->
+                        <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3"></button>
+                        <!--Calender icon button-->
+
                     </div>
-                    <button type="submit" class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white hover:text-[#27F4FF] bg-blue-700 rounded-lg border border-[#1aa9b1] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                    <button type="submit"
+                        class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white hover:text-[#27F4FF] bg-blue-700 rounded-lg border border-[#1aa9b1] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                         <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>Search
                     </button>
-                
                 </form>
 
-                <p class="font-light text-gray-500 sm:text-xl ">Elevate your daily journaling experience with JournalEase - The convenient and secure way to document your memories online.</p>
+                <p class="font-light text-gray-500 sm:text-xl ">Elevate your daily journaling experience with
+                    JournalEase - The convenient and secure way to document your memories online.</p>
             </div>
 
             <div class="grid gap-8 lg:grid-cols-2">
@@ -98,16 +106,22 @@
                 <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-md ">
                     <div class="flex justify-between items-center mb-5 text-gray-500">
                         <span
-                            class="bg-primary-100 uppercase tracking-tight let text-primary-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded ">{{ entry.mood }}
+                            class="bg-primary-100 uppercase tracking-tight let text-primary-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded ">{{
+                            entry.mood }}
                         </span>
                         <span class="text-sm">{{ entry.date_created }}</span>
                     </div>
-                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "><a href="#"></a> {{ entry.title }}</h2>
+                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 "><a href="#"></a> {{ entry.title }}
+                    </h2>
                     <p class="mb-5 font-light text-gray-600 ">{{ entry.content|truncatechars:200 }}</p>
-                    <a href="{% url 'preview' entry.id %}" class="inline-flex items-center font-medium text-primary-600  hover:underline underline-offset-4">Read more
+                    <a href="{% url 'preview' entry.id %}"
+                        class="inline-flex items-center font-medium text-primary-600  hover:underline underline-offset-4">Read
+                        more
                         <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
                         </svg>
                     </a>
                 </div>
@@ -122,6 +136,41 @@
             <span class="">@ 2023 Copyright: JournalEase.com</span>
         </div>
     </footer>
+
+    <div id="warning" class="hidden  fixed top-16 left-[82rem]  justify-center items-center w-full md:h-full">
+        <div class="relative  p-4 w-full max-w-md h-full md:h-auto">
+            <div class="relative shadow p-4 text-center bg-white rounded-lg  sm:p-5">
+                <button onclick="hideWarning()" type="button" class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center ">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <img  src="{% static 'images/delete.svg' %}" class="text-gray-400 dark:text-gray-500 w-11 h-11 mb-3.5 mx-auto" alt="">
+                <p class="mb-4 text-gray-500 dark:text-gray-300">Are you sure you want to delete the account?</p>
+                <div class="flex justify-center items-center space-x-4">
+                    <button onclick="hideWarning()"  type="button" class="py-2 px-3 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-200 hover:bg-gray-100  hover:text-gray-900 ">
+                        No, cancel
+                    </button>
+                    <button onclick="deleteItem()" type="submit" class="py-2 px-3 text-sm font-medium text-center text-white border-red-500  hover:bg-red-600 rounded-lg bg-red-500 hover:border-red-600">
+                        Yes, I'm sure
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showWarning() {
+            document.getElementById('warning').classList.remove('hidden');
+        }
+        function deleteItem() {
+
+            hideWarning();
+        }
+
+        function hideWarning() {
+            document.getElementById('warning').classList.add('hidden');
+        }
+
+    </script>
 </body>
 
 </html>
