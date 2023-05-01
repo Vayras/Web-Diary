@@ -15,34 +15,31 @@
 
 <body class="bg-gray-50">
     <div class=" ">
-        <nav class=" py-3 ">
-            <div class="max-w-screen-xl flex flex-wrap items-center  justify-between mx-auto p-4">
+            <nav class="py-3">
+              <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
                 <a href="{% url 'home' %}" class="-mt-3">
-                    <img src="{% static 'images/JournalEase.png' %}" class="w-[9.8rem] h-7"
-                        alt="JournalEase logo" />
+                  <img src="{% static 'images/JournalEase.png' %}" class="w-[9.8rem] h-7" alt="JournalEase logo" />
                 </a>
-                <div class="px-2 rounded-lg">
-                    <h2 class="text-lg font-semibold tracking-wide">Total Entries :
-                        <span class="text-xl  rounded-full  text-[#263238] bg-[#27F4FF] px-3">{{total_entries}}</span>
-                    </h2>
-
+                <div class="flex items-center justify-center">
+                  <h2 class="text-lg font-semibold tracking-wide mr-4">Total Entries:</h2>
+                  <span class="text-xl rounded-full text-[#263238] bg-[#27F4FF] px-3">{{total_entries}}</span>
                 </div>
-
                 <div class="md:block md:w-auto">
-                    <ul
-                        class="font-medium flex items-center md:p-0   border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
-                        <li>
-                            <a href="{% url 'home' %}" class="block pl-3 pr-4 hover:text-[#1aa9b1] rounded  text-gray-900">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block pl-3 pr-4 py-1 text-white border-2 border-red-500 hover:bg-red-600 rounded-lg bg-red-500 hover:border-red-600 flex items-center">Delete Profile</a>
-                        </li>
-                    </ul>
-
+                  <ul class="font-medium flex items-center md:p-0 border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+                    <li>
+                      <a href="{% url 'home' %}" class="block pl-3 pr-4 hover:text-[#1aa9b1] rounded text-gray-900">Home</a>
+                    </li>
+                    <li>
+                      <a href="{% url 'logout' %}" class="block pl-3 pr-4 hover:text-[#1aa9b1] rounded text-gray-900">Logout</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block pl-3 pr-4 py-1 text-white border-2 border-red-500 hover:bg-red-600 rounded-lg bg-red-500 hover:border-red-600 flex items-center">Delete Profile</a>
+                    </li>
+                  </ul>
                 </div>
+              </div>
+            </nav>
 
-            </div>
-        </nav>
 
         <section class="text-gray-600 body-font">
             <div class="container mx-auto flex px-5 py-20 items-center justify-center flex-col">
