@@ -20,37 +20,30 @@
                     <h1 class="text-xl font-bold leading-light tracking-tight text-gray-900 md:text-2xl">
                         Create an account
                     </h1>
-                    <form class="space-y-3" action="#">
+                    <form class="space-y-3" method="POST" action="">
+                        {% csrf_token %}
                         <div>
                             <label for="name" class="block mb-2 text-sm font-medium text-gray-900">
                                 Name</label>
-                            <input type="text" name="name" id="name"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                placeholder="Name" required>
+                            {{form.username}}
                         </div>
                         
                         <div>
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900">
                                 Email</label>
-                            <input type="email" name="email" id="email"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                placeholder="username@gmail.com" required>
+                            {{form.email}}
                         </div>
                         <div>
                             <label for="password"
                                 class="block mb-2 text-sm font-medium text-gray-900 :text-white">Password</label>
-                            <input type="password" name="password" id="password" placeholder="••••••••"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                required="">
+                            {{form.password1}}
                         </div>
                         <div>
                             <label for="re-password"
                                 class="block mb-2 text-sm font-medium text-gray-900 :text-white">Enter password again</label>
-                            <input type="password" name="re-password" id="re-password" placeholder="••••••••"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                required="">
+                             {{form.password2}}
                         </div>
-                        <div></div>
+                    {{form.errors}}
                         <button type="submit"
                             class="w-auto  text-white bg-[#0077c0] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-6 py-2.5 text-center">Register</button>
                         <p class="text-sm inline max-[639px]:block max-[639px]:ml-1 max-[864px]:block max-[864px]:ml-1 ml-9 font-light text-gray-500">
