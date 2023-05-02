@@ -1,6 +1,6 @@
-# Web-Diary
+# JournalEase
 
-Web Diary is a web application for keeping a personal diary online. It allows users to create, view, edit, and delete diary entries. The application is built using the Django framework.
+JournalEase is a web application for keeping a personal diary online. It allows users to create, view, edit, and delete diary entries. The application is built using the Django framework.
 
 ## Getting Started
 
