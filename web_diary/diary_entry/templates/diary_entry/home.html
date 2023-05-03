@@ -27,7 +27,7 @@
                 </div>
                 <div class="md:block md:w-auto">
 
-                    <ul>
+                    <ul
                         class="font-medium flex items-center md:p-0   border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
                         <li>
                             <a href="{% url 'home' %}"
@@ -80,11 +80,15 @@
 
                     <div class="relative">
 
-                        <input type=""
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:outline focus:border-blue-500 block w- pl-10 p-2.5"
-                            placeholder="MM/DD/YYYY" required><!--input field box for entering the date-->
-                        <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3"></button>
-                        <!--Calender icon button-->
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                            <svg aria-hidden="true" class="text-gray-500 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4H19C20.1046 4 21 4.89543 21 6V18C21 19.1046 20.1046 20 19 20H5C3.89543 20 3 19.1046 3 18V6C3 4.89543 3.89543 4 5 4Z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 2V6"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 2V6"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10H21"></path>
+                            </svg>
+                        </span>
+                            {{ myFilter.form.as_p }}
 
                     </div>
                     <button type="submit"
@@ -106,8 +110,7 @@
                 <div class="p-6 bg-white rounded-lg border border-gray-200 shadow-md ">
                     <div class="flex justify-between items-center mb-5 text-gray-500">
                         <span
-                            class="bg-primary-100 uppercase tracking-tight let text-primary-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded ">{{
-                            entry.mood }}
+                            class="bg-primary-100 uppercase tracking-tight let text-primary-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded ">{{entry.mood }}
                         </span>
                         <span class="text-sm">{{ entry.date_created }}</span>
                     </div>
@@ -126,11 +129,9 @@
                     </a>
                 </div>
                 {% endfor %}
-
             </div>
         </div>
     </section>
-
     <footer>
         <div class="bg-[#455A64] text-white h-16 mt-16 w-auto flex flex-row justify-center items-center">
             <span class="">@ 2023 Copyright: JournalEase.com</span>
